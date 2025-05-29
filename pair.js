@@ -57,21 +57,21 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
                let GIFTED_MD_TEXT = `
-*_Pair Code Connected by ZENITSU*
+*_Pair Code Connected by ALLAMANO *
 *_Made With 🚬🗿_*
 ______________________________________
 ╔════◇
-║ *『 AMAZING YOU'VE CHOSEN ZENITSU CRASH V2 』*
+║ *『 AMAZING YOU'VE CHOSEN NEUROTECH-XMD BOT 』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚════════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _https://www.youtube.com/@BTSMODZ
-║❒ *Owner:* https://wa.me/2348075952205_
-║❒ *Repo:* _https://github.com/Fearless-tech1_
-║❒ *WaGroup:* _https://chat.whatsapp.com/C3GFThC0tIpGaJY9DFUeCK
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029VahusSh0QeaoFzHJCk2x
-║❒ *Plugins:* _https://github.com/Fearless-tech1 
+║❒ *Ytube:* https://www.youtube.com/@Neurotech-xmd
+║❒ *Owner:* https://wa.me/254785760507_
+║❒ *Repo:*  https://github.com/Allamano774/NEUROTECH-XMD
+║❒ *WaGroup:* _https://chat.whatsapp.com/Iy4qj2viFlkL50AXII7kCz
+║❒ *WaChannel:* _https://whatsapp.com/channel/0029VbAGDcU2f3ETH93NUd3o
+║❒ *Telegram:*  _https://t.me/+aN69GzBoTtNjYTc0
 ╚════════════════════════╝
 _____________________________________
 
