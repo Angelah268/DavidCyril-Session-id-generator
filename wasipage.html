@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NEUROTECH CRASH BUG </title>
+  <title>NEUROTECH CRASH BUG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <style>
     body {
       display: flex;
@@ -12,7 +13,25 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background-color: black;
+      background: #0f2027 url('https://i.ibb.co/YfrrC9S/your-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      position: relative;
+      color: white;
+    }
+
+    /* Overlay for blur effect and readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      z-index: 0;
     }
 
     .btn {
@@ -72,16 +91,9 @@
       filter: brightness(.7);
       transform: scale(.98);
     }
-  </style><style>
-  body {
-    background: url('https://i.ibb.co/YfrrC9S/your-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    overflow: hidden;
-    font-family: sans-serif;
-  }
-
+  </style>
 </head>
+
 <body>
 
   <button onclick="window.open(`/wasiqr`)" class="btn">QR Code</button>
@@ -92,7 +104,6 @@
   <button onclick="window.open(`https://chat.whatsapp.com/Iy4qj2viFlkL50AXII7kCz`)" class="btn">Wa Group</button>
   <button onclick="window.open(`https://whatsapp.com/channel/0029VbAGDcU2f3ETH93NUd3o`)" class="btn">Wa Channel</button>
   <button onclick="window.open(`https://www.youtube.com/@Neurotech-xmd`)" class="btn">Youtube</button>
-  
 
 </body>
 </html>
