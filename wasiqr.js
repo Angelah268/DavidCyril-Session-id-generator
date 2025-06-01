@@ -59,6 +59,7 @@ router.get('/', async (req, res) => {
 				   let session = await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id, { text: '' + b64data });
 	
 				   let WASI_MD_TEXT = `
+         <img src="https://i.ibb.co/your-image.jpg" alt="Description of Image" width="600" height="400" />
 *_Session Connected By Allamano*
 *_Made With 🤍_*
 ______________________________________
