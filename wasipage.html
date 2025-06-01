@@ -2,102 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>NEUROTECH CRASH BUG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEURITECH XMD Session</title>
   <style>
     body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      margin: 0;
-      background: linear-gradient(to top right, #000000c0, #002244c0),
-        url('https://i.ibb.co/3MxKqym/Screenshot-2025-06-01-111812.png')
-          no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      overflow: hidden;
-      position: relative;
-      color: white;
+      padding: 20px;
     }
 
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(
-        circle at center,
-        rgba(255, 255, 255, 0.05),
-        transparent 70%
-      );
-      z-index: 0;
+    .container {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      max-width: 90%;
     }
 
-    .btn {
-      --color: #e5f5f1;
-      --color2: rgb(0, 0, 0);
-      width: 200px;
-      padding: 0.8em 1.75em;
-      background: linear-gradient(145deg, #00ff99, #0066ff);
-      border-radius: 6px;
-      border: none;
-      transition: 0.4s;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      z-index: 1;
+    h1 {
+      font-size: 2rem;
+      color: #00ffff;
+    }
+
+    #session-id {
+      font-size: 1.5rem;
       font-weight: bold;
-      font-size: 17px;
-      font-family: 'Roboto', 'Segoe UI', sans-serif;
-      text-transform: uppercase;
-      color: white;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0, 255, 200, 0.5),
-        0 0 20px rgba(0, 102, 255, 0.4);
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(145deg, #00cc88, #0055cc);
-      box-shadow: 0 0 20px rgba(0, 255, 200, 0.7),
-        0 0 30px rgba(0, 102, 255, 0.6);
-    }
-
-    .btn:active {
-      filter: brightness(0.8);
-      transform: scale(0.97);
-    }
-
-    img.neurotech-img {
+      color: #00ff88;
+      background: #000;
+      padding: 15px;
       margin-top: 20px;
-      max-width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0, 255, 200, 0.7);
-      z-index: 1;
-      position: relative;
+      border-radius: 10px;
+      user-select: all;
+      word-break: break-all;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffff;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00aaaa;
     }
   </style>
 </head>
-
 <body>
-  <button onclick="window.open(`/wasiqr`)" class="btn">QR Code</button>
-  <button onclick="window.open(`/pair`)" class="btn">Pair Code</button>
-  <button onclick="window.open(`https://github.com/Allamano774/NEUROTECH-XMD`)" class="btn">Bot Repo</button>
-  <button onclick="window.open(`https://github.com/Allamano774/NEUROTECH-XMD`)" class="btn">Plugins</button>
-  <button onclick="window.open(`https://wa.me/254785760507`)" class="btn">Contact Me</button>
-  <button onclick="window.open(`https://chat.whatsapp.com/Iy4qj2viFlkL50AXII7kCz`)" class="btn">Wa Group</button>
-  <button onclick="window.open(`https://whatsapp.com/channel/0029VbAGDcU2f3ETH93NUd3o`)" class="btn">Wa Channel</button>
-  <button onclick="window.open(`https://www.youtube.com/@Neurotech-xmd`)" class="btn">YouTube</button>
+  <div class="container">
+    <h1>NEURITECH XMD SESSION ID</h1>
+    <div id="session-id">Loading...</div>
+    <button onclick="copyToClipboard()">Copy Session ID</button>
+  </div>
 
-  <!-- Your uploaded image -->
-  <img
-    src="https://i.ibb.co/pjpL3ynS/Whats-App-Image-2025-05-30-at-13-08-32-53869e27.jpg"
-    alt="Neurotech Image"
-    class="neurotech-img"
-  />
+  <script>
+    // Example session ID fetch (replace this with your real backend call)
+    async function fetchSessionID() {
+      try {
+        const response = await fetch('/api/session'); // Update to match your backend route
+        const data = await response.text();
+        document.getElementById('session-id').textContent = data.trim();
+      } catch (error) {
+        document.getElementById('session-id').textContent = 'Failed to load session ID';
+      }
+    }
+
+    function copyToClipboard() {
+      const text = document.getElementById('session-id').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Session ID copied to clipboard!');
+      });
+    }
+
+    // Load session ID when page loads
+    window.onload = fetchSessionID;
+  </script>
 </body>
 </html>
